@@ -2,6 +2,10 @@ body {
   font-family: "Be Vietnam", sans-serif;
   font-size: 1.6rem;
   color: $color-grey-dark;
+
+  @include respond(mobile) {
+    font-size: 1.7rem;
+  }
 }
 
 h1,
