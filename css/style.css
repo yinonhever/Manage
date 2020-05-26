@@ -35,7 +35,7 @@ h4 {
   border: none;
   font-family: inherit; }
   .btn:hover {
-    opacity: 0.6; }
+    opacity: 0.5; }
   .btn--red {
     background-color: #f25f3a;
     color: #fafafa; }
