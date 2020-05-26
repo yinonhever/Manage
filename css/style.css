@@ -13,6 +13,35 @@ body {
   body.no-scroll {
     overflow: hidden; }
 
+@media only screen and (max-width: 600px) {
+  header, section:not(.testimonials), footer {
+    padding-left: 7% !important;
+    padding-right: 7% !important; } }
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(4rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes slideUpBtn {
+  0% {
+    opacity: 0;
+    transform: translateY(6rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(4rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
 body {
   font-family: "Be Vietnam", sans-serif;
   font-size: 1.6rem;
@@ -22,7 +51,22 @@ h1,
 h2,
 h3,
 h4 {
-  color: #1d1e25; }
+  color: #1d1e25;
+  font-weight: 600; }
+
+.heading-primary {
+  font-size: 4.5rem;
+  line-height: 1.3; }
+
+.heading-secondary {
+  font-size: 3.75rem;
+  line-height: 1.3; }
+
+.paragraph {
+  line-height: 1.8; }
+
+.u-margin-bottom-small {
+  margin-bottom: 2.5rem !important; }
 
 .btn {
   text-decoration: none;
@@ -47,8 +91,28 @@ h4 {
   width: 40%;
   max-width: 16.5rem; }
 
+.feature__top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+
+.feature__number {
+  background-color: #f25f3a;
+  color: #fafafa;
+  font-size: 1.7rem;
+  font-weight: 500;
+  border-radius: 100px;
+  width: 7rem;
+  padding: .7rem 0;
+  text-align: center;
+  margin-right: 3rem; }
+
+.feature__text {
+  margin-top: 1.5rem;
+  margin-left: calc(7rem + 3rem); }
+
 .header {
-  padding: 4rem 7%;
+  padding: 4rem 9%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,8 +150,8 @@ h4 {
       visibility: hidden;
       position: absolute;
       top: 11rem;
-      left: 7%;
-      right: 7%;
+      left: 9%;
+      right: 9%;
       background-color: #fafafa;
       padding: 3.5rem 0;
       text-align: center;
@@ -110,3 +174,61 @@ h4 {
   @media only screen and (max-width: 600px) {
     .header {
       height: 11rem; } }
+
+.intro {
+  padding: 2rem 9%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center; }
+  .intro__bg {
+    position: absolute;
+    z-index: -1;
+    width: 45vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-image: url(../images/bg-tablet-pattern.svg);
+    background-position: left bottom; }
+  .intro__img {
+    width: 55%;
+    margin-right: -1.9rem;
+    animation: slideLeft 0.6s ease-out; }
+  .intro__content {
+    width: 40%;
+    margin-top: -3rem; }
+    .intro__content > * {
+      animation: slideUp 0.6s ease-out;
+      animation-fill-mode: backwards; }
+  .intro__heading {
+    animation-delay: 0.3s; }
+  .intro__text {
+    width: 85%;
+    margin-bottom: 4rem;
+    animation-delay: 0.5s; }
+  .intro__btn {
+    animation: slideUpBtn 0.6s ease-in 0.7s;
+    animation-fill-mode: backwards; }
+
+.features {
+  padding: 9rem 9%;
+  display: flex;
+  justify-content: space-between;
+  position: relative; }
+  .features__intro {
+    width: 40%; }
+  .features__intro-text {
+    width: 80%; }
+  .features__list {
+    width: 50%; }
+    .features__list > * {
+      margin-bottom: 4.5rem; }
+  .features__bg {
+    position: absolute;
+    z-index: -1;
+    width: 25vw;
+    height: 90vh;
+    top: 49%;
+    left: 0;
+    background-image: url(../images/bg-tablet-pattern.svg);
+    background-position: right top; }

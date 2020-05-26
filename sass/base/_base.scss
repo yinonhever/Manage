@@ -17,3 +17,10 @@ body {
     overflow: hidden;
   }
 }
+
+header, section:not(.testimonials), footer {
+  @include respond(mobile) {
+    padding-left: $padding-side-mobile !important;
+    padding-right: $padding-side-mobile !important;
+  }
+}

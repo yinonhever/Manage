@@ -9,4 +9,19 @@ h2,
 h3,
 h4 {
   color: $color-dark;
+  font-weight: 600;
+}
+
+.heading-primary {
+  font-size: 4.5rem;
+  line-height: 1.3;
+}
+
+.heading-secondary {
+  font-size: 3.75rem;
+  line-height: 1.3;
+}
+
+.paragraph {
+  line-height: 1.8;
 }
