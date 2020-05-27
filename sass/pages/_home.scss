@@ -83,7 +83,6 @@
   }
 }
 
-
 ///// FEATURES SECTION
 
 .features {
@@ -96,12 +95,12 @@
     padding-left: 0;
     padding-right: 0;
     width: 100%;
-    max-width: 50rem;
+    max-width: 55rem;
     margin: auto;
     flex-direction: column;
     position: initial;
   }
- 
+
   &__intro {
     width: 40%;
 
@@ -158,6 +157,87 @@
       top: 70%;
       width: 35%;
       height: 50%;
+    }
+  }
+}
+
+///// TESTIMONIALS SECTION
+.testimonials {
+  padding-bottom: 15rem;
+
+  @include respond(tablet) {
+    padding: 0 $padding-side-mobile 15rem;
+  }
+
+  &__heading {
+    text-align: center;
+    margin-bottom: 10.5rem;
+  }
+
+  &__btn-wrapper {
+    text-align: center;
+    margin-top: 6.5rem;
+
+    @include respond(tablet) {
+      margin-top: 8.5rem;
+    }
+  }
+}
+
+
+///// CTA SECTION
+.cta {
+  position: relative;
+  background-color: $color-primary-red;
+  overflow: hidden;
+
+  &__content {
+    padding: 7rem $padding-side;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    @include respond(tablet) {
+      padding: 7rem 0;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    width: 40%;
+    color: $color-white;
+
+    @include respond(tablet) {
+      width: 100%;
+      max-width: 50rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    left: 20%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bg-simplify-section-desktop.svg);
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+    @include respond(tablet) {
+      left: 0;
+      top: 15%;
+      right: initial;
+      width: 8rem;
+      height: 80%;
+      background-image: url(../images/bg-simplify-section-mobile.svg);
+      background-position: top;
     }
   }
 }

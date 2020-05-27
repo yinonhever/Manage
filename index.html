@@ -18,12 +18,14 @@
       href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css" />
     <script
       src="https://kit.fontawesome.com/5225b7dab1.js"
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
     <header class="header" id="header">
       <img src="images/logo.svg" alt="logo" class="logo" />
@@ -118,34 +120,104 @@
 
         <div class="features__bg"></div>
       </section>
+
+      <section class="testimonials" id="testimonials">
+        <h2 class="heading-secondary testimonials__heading">
+          What they’ve said
+        </h2>
+        <div class="swiper-container testimonials__swiper">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="testimonials__slide">
+                <img
+                  src="images/avatar-anisha.png"
+                  alt="avatar-anisha"
+                  class="testimonials__img"
+                />
+                <p class="testimonials__author">Anisha Li</p>
+                <p class="paragraph testimonials__quote">
+                  “Manage has supercharged our team’s workflow. The ability to
+                  maintain visibility on larger milestones at all times keeps
+                  everyone motivated.”
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonials__slide">
+                <img
+                  src="images/avatar-ali.png"
+                  alt="avatar-ali"
+                  class="testimonials__img"
+                />
+                <p class="testimonials__author">Ali Bravo</p>
+                <p class="paragraph testimonials__quote">
+                  “We have been able to cancel so many other subscriptions since
+                  using Manage. There is no more cross-channel confusion and
+                  everyone is much more focused.”
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonials__slide">
+                <img
+                  src="images/avatar-richard.png"
+                  alt="avatar-richard"
+                  class="testimonials__img"
+                />
+                <p class="testimonials__author">Richard Watts</p>
+                <p class="paragraph testimonials__quote">
+                  “Manage allows us to provide structure and process. It keeps
+                  us organized and focused. I can’t stop recommending them to
+                  everyone I talk to!”
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonials__slide">
+                <img
+                  src="images/avatar-shanai.png"
+                  alt="avatar-shanai"
+                  class="testimonials__img"
+                />
+                <p class="testimonials__author">Shanai Gough</p>
+                <p class="paragraph testimonials__quote">
+                  “Their software allows us to track, manage and collaborate on
+                  our projects from anywhere. It keeps the whole team in-sync
+                  without being intrusive.”
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Adding scrollbar -->
+          <div class="swiper-scrollbar testimonials__scrollbar"></div>
+          <!-- Adding pagination for mobile -->
+          <div class="swiper-pagination testimonials__pagination"></div>
+        </div>
+
+        <div class="testimonials__btn-wrapper">
+          <a href="#testimonials" class="btn btn--red">Get Started</a>
+        </div>
+      </section>
+
+      <section class="cta" id="cta">
+        <div class="cta__content">
+          <h2 class="heading-secondary cta__text">
+            Simplify how your team works today.
+          </h2>
+          <a href="#cta" class="btn btn--white"><span>Get Started</span></a>
+        </div>
+        <div class="cta__bg"></div>
+      </section>
     </main>
 
     <!--
+
   
 
-  What they’ve said
-
-  Anisha Li
-  “Manage has supercharged our team’s workflow. The ability to maintain
-  visibility on larger milestones at all times keeps everyone motivated.”
-
-  Ali Bravo
-  “We have been able to cancel so many other subscriptions since using
-  Manage. There is no more cross-channel confusion and everyone is much
-  more focused.”
-
-  Richard Watts
-  “Manage allows us to provide structure and process. It keeps us organized
-  and focused. I can’t stop recommending them to everyone I talk to!”
-
-  Shanai Gough
-  “Their software allows us to track, manage and collaborate on our projects
-  from anywhere. It keeps the whole team in-sync without being intrusive.”
-
-  Get Started
-
-  Simplify how your team works today.
-  Get Started
+  
+  
 
   Home
   Pricing
@@ -160,6 +232,7 @@
 
   Copyright 2020. All Rights Reserved -->
 
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="index.js"></script>
   </body>

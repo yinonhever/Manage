@@ -11,17 +11,23 @@
   border: none;
   font-family: inherit;
 
-  &:hover {
-    opacity: 0.5;
-  }
-
   &--red {
     background-color: $color-primary-red;
     color: $color-white;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 
   &--white {
     background-color: $color-white;
     color: $color-primary-red;
+
+    &:hover {
+      span {
+        opacity: 0.7;
+      }
+    }
   }
 }
