@@ -12,7 +12,7 @@
   font-family: inherit;
 
   &--red {
-    background-color: $color-primary-red;
+    background: $color-primary-red;
     color: $color-white;
 
     &:hover {
@@ -21,7 +21,7 @@
   }
 
   &--white {
-    background-color: $color-white;
+    background: $color-white;
     color: $color-primary-red;
 
     &:hover {
@@ -29,5 +29,9 @@
         opacity: 0.7;
       }
     }
+  }
+
+  &--small {
+    padding: 1.2rem 2.5rem;
   }
 }
