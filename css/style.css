@@ -105,12 +105,16 @@ h4 {
     padding: 1.2rem 2.5rem; }
 
 .testimonials__swiper {
+<<<<<<< HEAD
   padding-top: 4rem;
   width: 100%;
   height: 100%; }
   @media only screen and (max-width: 1050px) {
     .testimonials__swiper {
       padding-bottom: 5rem; } }
+=======
+  padding-top: 4rem; }
+>>>>>>> 96c5ec0011abc2591194ce87fb445e3e87172ba7
 
 .testimonials__slide {
   text-align: center;
