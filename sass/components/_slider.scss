@@ -1,6 +1,12 @@
 .testimonials {
   &__swiper {
-    overflow: initial;
+    padding-top: 4rem;
+    width: 100%;
+    height: 100%;
+
+    @include respond(tablet) {
+      padding-bottom: 5rem;
+    }
   }
 
   &__slide {
@@ -11,7 +17,7 @@
     position: relative;
 
     @include respond(tablet) {
-      height: initial;
+      height: auto;
     }
   }
 
@@ -33,8 +39,8 @@
     display: none;
 
     @include respond(tablet) {
-      display: initial;
-      top: 105%;
+      display: block;
+      top: 90%;
     }
   }
 

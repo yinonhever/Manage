@@ -8,7 +8,7 @@
 
   @include respond(tablet-land) {
     flex-direction: column-reverse;
-    padding-bottom: 10rem;
+    padding-bottom: 10rem; // Adding bottom padding on smaller devices to make space for the copyright text
   }
 
   @include respond(mobile) {
@@ -104,9 +104,33 @@
     display: flex;
     justify-content: flex-end;
     margin-bottom: 6.5rem;
+    position: relative;
 
     @include respond(tablet-land) {
       justify-content: center;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: -25px;
+      left: 2rem;
+      font-size: 1.4rem;
+      font-style: italic;
+
+      @include respond(tablet-land) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &.error::after {
+      content: "Please insert a valid email";
+      color: $color-primary-red;
+    }
+
+    &.success::after {
+      content: "Thank you for signing up!";
+      color: $color-white;
     }
   }
 
@@ -120,6 +144,7 @@
     width: 25rem;
     font-size: inherit;
     font-family: inherit;
+    color: $color-primary-red;
 
     @include respond(tablet-land) {
       width: 100%;
@@ -137,14 +162,12 @@
   }
 
   &__btn {
-    // &:hover {
-    //   background: linear-gradient(
-    //       to left,
-    //       rgba($color-primary-red, 0.9),
-    //       rgba($color-primary-red, 0.9)
-    //     ),
-    //     $color-white !important;
-    // }
+    box-shadow: none;
+
+    &:hover {
+      opacity: 0.9 !important;
+      filter: brightness(160%);
+    }
   }
 
   &__copyright {

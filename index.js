@@ -14,7 +14,6 @@ $("#toggler").change(() => {
 // INITIALIZING THE SWIPERJS SLIDER
 $(document).ready(function () {
     var mySwiper = new Swiper(".swiper-container", {
-        // Optional parameters
         init: true,
         slidesPerView: slides(),
         spaceBetween: 30,
@@ -44,8 +43,7 @@ function slides() {
     }
 }
 
-
-// Setting free mode to the slider on desktop
+// Setting the slide to free mode on desktop
 function setFreeMode() {
     if ($(window).width() > 1050) {
         return true;
@@ -54,3 +52,25 @@ function setFreeMode() {
         return false;
     }
 }
+
+
+// VALIDATING EMAIL ADDRESS
+function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+
+$(".footer__form").on("submit", function(event) {
+    event.preventDefault();
+    let email = $(".footer__input").val();
+
+    if(validateEmail(email)) {
+        $(this).removeClass("error");
+        $(".footer__input").val("");
+        $(this).addClass("success");
+    }
+    else {
+        $(this).removeClass("success");
+        $(this).addClass("error");
+    }
+})

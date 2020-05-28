@@ -20,7 +20,6 @@ html {
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 body.no-scroll {
@@ -28,10 +27,22 @@ body.no-scroll {
 }
 
 @media only screen and (max-width: 600px) {
-  header, section:not(.features), footer {
+  header,
+  section:not(.features),
+  footer {
     padding-left: 7% !important;
     padding-right: 7% !important;
   }
+}
+
+::-moz-selection {
+  background-color: #f25f3a;
+  color: #fff;
+}
+
+::selection {
+  background-color: #f25f3a;
+  color: #fff;
 }
 
 @-webkit-keyframes slideUp {
@@ -156,6 +167,8 @@ h4 {
   font-weight: 500;
   padding: 1.2rem 3.5rem;
   border-radius: 100px;
+  -webkit-box-shadow: rgba(242, 95, 58, 0.4) 0px 6px 9px 0px;
+          box-shadow: rgba(242, 95, 58, 0.4) 0px 6px 9px 0px;
   cursor: pointer;
   outline: none;
   border: none;
@@ -177,7 +190,7 @@ h4 {
 }
 
 .btn--white:hover span {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .btn--small {
@@ -185,7 +198,15 @@ h4 {
 }
 
 .testimonials__swiper {
-  overflow: initial;
+  padding-top: 4rem;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 1050px) {
+  .testimonials__swiper {
+    padding-bottom: 5rem;
+  }
 }
 
 .testimonials__slide {
@@ -198,7 +219,7 @@ h4 {
 
 @media only screen and (max-width: 1050px) {
   .testimonials__slide {
-    height: initial;
+    height: auto;
   }
 }
 
@@ -223,8 +244,8 @@ h4 {
 
 @media only screen and (max-width: 1050px) {
   .testimonials__pagination {
-    display: initial;
-    top: 105%;
+    display: block;
+    top: 90%;
   }
 }
 
@@ -563,6 +584,7 @@ h4 {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-bottom: 6.5rem;
+  position: relative;
 }
 
 @media only screen and (max-width: 1130px) {
@@ -571,6 +593,32 @@ h4 {
         -ms-flex-pack: center;
             justify-content: center;
   }
+}
+
+.footer__form::after {
+  position: absolute;
+  bottom: -25px;
+  left: 2rem;
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+@media only screen and (max-width: 1130px) {
+  .footer__form::after {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.footer__form.error::after {
+  content: "Please insert a valid email";
+  color: #f25f3a;
+}
+
+.footer__form.success::after {
+  content: "Thank you for signing up!";
+  color: #fafafa;
 }
 
 .footer__input {
@@ -583,6 +631,7 @@ h4 {
   width: 25rem;
   font-size: inherit;
   font-family: inherit;
+  color: #f25f3a;
 }
 
 @media only screen and (max-width: 1130px) {
@@ -614,6 +663,17 @@ h4 {
 .footer ::placeholder {
   font-size: 1.6rem;
   font-family: "Be Vietnam", sans-serif;
+}
+
+.footer__btn {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.footer__btn:hover {
+  opacity: 0.9 !important;
+  -webkit-filter: brightness(160%);
+          filter: brightness(160%);
 }
 
 .footer__copyright {
@@ -760,6 +820,7 @@ h4 {
   .features {
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 7rem;
     width: 100%;
     max-width: 55rem;
     margin: auto;
@@ -846,24 +907,18 @@ h4 {
 
 @media only screen and (max-width: 1050px) {
   .testimonials {
-    padding: 0 7% 15rem;
+    padding: 0 7% 12rem;
   }
 }
 
 .testimonials__heading {
   text-align: center;
-  margin-bottom: 10.5rem;
+  margin-bottom: 6.5rem;
 }
 
 .testimonials__btn-wrapper {
   text-align: center;
   margin-top: 6.5rem;
-}
-
-@media only screen and (max-width: 1050px) {
-  .testimonials__btn-wrapper {
-    margin-top: 8.5rem;
-  }
 }
 
 .cta {

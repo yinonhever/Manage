@@ -16,16 +16,22 @@ html {
 
 body {
   box-sizing: border-box;
-  overflow-x: hidden;
 
   &.no-scroll {
     overflow: hidden;
   }
 }
 
-header, section:not(.features), footer {
+header,
+section:not(.features),
+footer {
   @include respond(mobile) {
     padding-left: $padding-side-mobile !important;
     padding-right: $padding-side-mobile !important;
   }
+}
+
+::selection {
+  background-color: $color-primary-red;
+  color: #fff;
 }
