@@ -372,7 +372,8 @@ h4 {
       border: 1px solid #f25f3a; }
   .footer ::placeholder {
     font-size: 1.6rem;
-    font-family: "Be Vietnam", sans-serif; }
+    font-family: "Be Vietnam", sans-serif;
+    color: #9095a7; }
   .footer__btn {
     box-shadow: none; }
     .footer__btn:hover {
