@@ -1,4 +1,5 @@
 // RESPONDING TO CLICK ON MOBILE MENU ICON
+///// Most changes are applied through CSS styling
 $("#toggler").change(() => {
     $("body").toggleClass("no-scroll");
 
