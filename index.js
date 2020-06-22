@@ -13,34 +13,32 @@ $("#toggler").change(() => {
 
 
 // INITIALIZING THE SWIPERJS SLIDER
-$(document).ready(function () {
-    initSwiper();
+
+var mySwiper = new Swiper(".swiper-container", {
+    init: true,
+    slidesPerView: slides(),
+    spaceBetween: 30,
+    freeMode: setFreeMode(),
+    observer: true,
+
+    // Adding pagination
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+    },
+
+    // Adding scrollbar
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true
+    },
 });
 
 $(window).resize(function() {
-    initSwiper();
+    mySwiper.params.slidesPerView = slides();
+    mySwiper.params.freeMode = setFreeMode();
 })
 
-function initSwiper() {
-    const mySwiper = new Swiper(".swiper-container", {
-        init: true,
-        slidesPerView: slides(),
-        spaceBetween: 30,
-        freeMode: setFreeMode(),
-
-        // Adding pagination
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true
-        },
-
-        // Adding scrollbar
-        scrollbar: {
-            el: ".swiper-scrollbar",
-            hide: true
-        },
-    });
-}
 
 // Setting the number of slides per view according to screen width
 function slides() {
