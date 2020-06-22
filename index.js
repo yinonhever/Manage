@@ -13,7 +13,15 @@ $("#toggler").change(() => {
 
 // INITIALIZING THE SWIPERJS SLIDER
 $(document).ready(function () {
-    var mySwiper = new Swiper(".swiper-container", {
+    initSwiper();
+});
+
+$(window).resize(function() {
+    initSwiper();
+})
+
+function initSwiper() {
+    const mySwiper = new Swiper(".swiper-container", {
         init: true,
         slidesPerView: slides(),
         spaceBetween: 30,
@@ -31,7 +39,7 @@ $(document).ready(function () {
             hide: true
         },
     });
-});
+}
 
 // Setting the number of slides per view according to screen width
 function slides() {
@@ -56,15 +64,15 @@ function setFreeMode() {
 
 // VALIDATING EMAIL ADDRESS
 function validateEmail(email) {
-    var re = /\S+@\S+\.\S+/;
+    const re = /\S+@\S+\.\S+/;
     return re.test(email);
 }
 
-$(".footer__form").on("submit", function(event) {
+$(".footer__form").on("submit", function (event) {
     event.preventDefault();
     let email = $(".footer__input").val();
 
-    if(validateEmail(email)) {
+    if (validateEmail(email)) {
         $(this).removeClass("error");
         $(".footer__input").val("");
         $(this).addClass("success");

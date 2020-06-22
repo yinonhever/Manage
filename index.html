@@ -27,49 +27,60 @@
   </head>
 
   <body>
-    <header class="header" id="header">
-      <img src="images/logo.svg" alt="logo" class="logo" />
-      <input type="checkbox" class="header__checkbox" id="toggler" />
-      <label for="toggler" class="header__nav-toggle">
-        <img
-          src="images/icon-hamburger.svg"
-          alt="toggle icon"
-          class="header__nav-icon"
-        />
-      </label>
-      <nav class="header__navigation">
-        <div class="header__nav-list">
-          <a href="#header" class="header__nav-item">Pricing</a>
-          <a href="#header" class="header__nav-item">Product</a>
-          <a href="#header" class="header__nav-item">About Us</a>
-          <a href="#header" class="header__nav-item">Careers</a>
-          <a href="#header" class="header__nav-item">Community</a>
-        </div>
-      </nav>
-      <a href="#header" class="btn btn--red">Get Started</a>
-    </header>
-
     <main>
-      <section class="intro" id="intro">
-        <div class="intro__bg"></div>
+      <div class="container">
         <img
-          src="images/illustration-intro.svg"
-          alt="illustration-intro"
-          class="intro__img"
+          src="images/bg-tablet-pattern.svg"
+          alt="bg-pattern"
+          class="container__bg container__bg--1"
         />
-        <div class="intro__content">
-          <h1 class="heading-primary intro__heading u-margin-bottom-small">
-            Bring everyone together to build better products.
-          </h1>
-          <p class="paragraph intro__text">
-            Manage makes it simple for software teams to plan day-to-day tasks
-            while keeping the larger team goals in view.
-          </p>
-          <a href="#intro" class="btn btn--red intro__btn">Get Started</a>
-        </div>
-      </section>
+
+        <header class="header" id="header">
+          <img src="images/logo.svg" alt="logo" class="logo" />
+          <input type="checkbox" class="header__checkbox" id="toggler" />
+          <label for="toggler" class="header__nav-toggle">
+            <img
+              src="images/icon-hamburger.svg"
+              alt="toggle icon"
+              class="header__nav-icon"
+            />
+          </label>
+          <nav class="header__navigation">
+            <div class="header__nav-list">
+              <a href="#header" class="header__nav-item">Pricing</a>
+              <a href="#header" class="header__nav-item">Product</a>
+              <a href="#header" class="header__nav-item">About Us</a>
+              <a href="#header" class="header__nav-item">Careers</a>
+              <a href="#header" class="header__nav-item">Community</a>
+            </div>
+          </nav>
+          <a href="#header" class="btn btn--red">Get Started</a>
+        </header>
+
+        <section class="intro" id="intro">
+          <img
+            src="images/illustration-intro.svg"
+            alt="illustration-intro"
+            class="intro__img"
+          />
+          <div class="intro__content">
+            <h1 class="heading-primary intro__heading u-margin-bottom-small">
+              Bring everyone together to build better products.
+            </h1>
+            <p class="paragraph intro__text">
+              Manage makes it simple for software teams to plan day-to-day tasks
+              while keeping the larger team goals in view.
+            </p>
+            <a href="#intro" class="btn btn--red intro__btn">Get Started</a>
+          </div>
+        </section>
+      </div>
 
       <section class="features">
+        <div class="features__bg">
+          <img src="images/bg-tablet-pattern.svg" alt="bg-pattern">
+        </div>
+
         <div class="features__intro">
           <h2 class="heading-secondary u-margin-bottom-small">
             What’s different about Manage?
@@ -117,8 +128,6 @@
             </p>
           </div>
         </div>
-
-        <div class="features__bg"></div>
       </section>
 
       <section class="testimonials" id="testimonials">
@@ -214,13 +223,23 @@
 
     <footer class="footer" id="footer">
       <div class="footer__left">
-        <img src="images/logo-white.svg" alt="logo" class="logo">
+        <img src="images/logo-white.svg" alt="logo" class="logo" />
         <div class="footer__social-row">
-          <a href="#footer" class="footer__social-link"><i class="fab fa-facebook-square"></i></a>
-          <a href="#footer" class="footer__social-link"><i class="fab fa-youtube"></i></a>
-          <a href="#footer" class="footer__social-link"><i class="fab fa-twitter"></i></a>
-          <a href="#footer" class="footer__social-link"><i class="fab fa-pinterest"></i></a>
-          <a href="#footer" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#footer" class="footer__social-link"
+            ><i class="fab fa-facebook-square"></i
+          ></a>
+          <a href="#footer" class="footer__social-link"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a href="#footer" class="footer__social-link"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="#footer" class="footer__social-link"
+            ><i class="fab fa-pinterest"></i
+          ></a>
+          <a href="#footer" class="footer__social-link"
+            ><i class="fab fa-instagram"></i
+          ></a>
         </div>
       </div>
       <div class="footer__navigation">
@@ -244,7 +263,9 @@
             placeholder="Updates in your inbox…"
             aria-label="Email address"
           />
-          <button type="submit" class="btn btn--red btn--small footer__btn">Go</button>
+          <button type="submit" class="btn btn--red btn--small footer__btn">
+            Go
+          </button>
         </form>
         <p class="footer__copyright">Copyright 2020. All Rights Reserved</p>
       </div>

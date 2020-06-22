@@ -12,6 +12,10 @@
   border: none;
   font-family: inherit;
 
+  &, & > span {
+    transition: all .5s;
+  }
+
   &--red {
     background: $color-primary-red;
     color: $color-white;
